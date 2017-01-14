@@ -28,13 +28,11 @@ class InventoriesController < ApplicationController
 
   def create
     @inventory = Inventory.new(inventory_params)
-    @inventory.user_id = current_user.id
     @inventory.save
     redirect_to inventories_path, notice: "Inventory created successfully"
   end
 
   def update
-    @inventory.user_id = current_user.id
     @inventory.update(inventory_params)
     redirect_to inventories_path, notice: "Inventory updated successfully"
   end
