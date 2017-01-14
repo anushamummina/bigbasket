@@ -23,6 +23,7 @@ class InventoriesController < ApplicationController
   end
 
   def edit
+    @users = User.all
   end
 
   def create
@@ -33,6 +34,7 @@ class InventoriesController < ApplicationController
   end
 
   def update
+    @inventory.user_id = current_user.id
     @inventory.update(inventory_params)
     respond_with(@inventory)
   end
