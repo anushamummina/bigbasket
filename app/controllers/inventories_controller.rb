@@ -36,7 +36,7 @@ class InventoriesController < ApplicationController
   def update
     @inventory.user_id = current_user.id
     @inventory.update(inventory_params)
-    respond_with(@inventory)
+    redirect_to inventories_path, notice: "Inventory updated successfully"
   end
 
   def destroy
