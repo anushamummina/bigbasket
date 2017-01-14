@@ -1,0 +1,7 @@
+<%= simple_form_for(@inventory, html:{class:"form-horizontal"}) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :quantity %>
+  <%= f.input :inventory_amount %>
+  <%= f.input :user_id, collection: @users.map{|x| [x.name, x.id]} %>
+  <%= f.submit %>
+<% end %>
