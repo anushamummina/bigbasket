@@ -33,7 +33,7 @@ gem 'mysql'
 gem 'devise'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
-
+gem 'heroku'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,3 +46,4 @@ gem 'simple_form'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+ruby "2.2.1"
